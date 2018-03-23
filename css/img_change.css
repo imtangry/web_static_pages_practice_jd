@@ -1,0 +1,33 @@
+.img_show {
+    position: relative;
+    margin: 20px auto;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #949597;
+    overflow: hidden;
+}
+
+.img_show>img{
+    display: none;
+    position: absolute;
+    width: 500px;
+    float: left;
+}
+.count {
+    display: block;
+    list-style: none;
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+
+.count > li {
+    cursor: pointer;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    padding: 0 6px;
+    background: #949597;
+    color: #fff;
+    margin-left: 5px;
+}

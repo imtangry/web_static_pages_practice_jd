@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #F0F3EF;
+}
+.top_nav {
+    position: relative;
+    background: #e3e4e6;
+    width: 100%;
+    height: 30px;
+}
+.nw {
+    height: 30px;
+    width: 1190px;
+    margin: 0 auto;
+}
+.nw ul {
+    display: block;
+    float: left;
+    list-style: none;
+
+}
+.nw>ul>li{
+    font: 100 12px/30px "微软雅黑";
+    color: #949597;
+    padding: 0 6px;
+    display: block;
+    float: left;
+}
+.nw>ul>li>a {
+    text-decoration: none;
+    color: #949597;
+}
+.nw>ul>li>a:hover{
+color:#F10215;
+}
+.nw .tl {
+    float: left;
+}
+.nw .tr{
+    float: right;
+}
