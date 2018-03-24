@@ -2,43 +2,107 @@
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background: #F0F3EF;
 }
+
+/*顶部导航栏START*/
 .top_nav {
     position: relative;
     background: #e3e4e6;
     width: 100%;
     height: 30px;
 }
+
 .nw {
     height: 30px;
     width: 1190px;
     margin: 0 auto;
 }
+
 .nw ul {
     display: block;
-    float: left;
     list-style: none;
+}
 
-}
-.nw>ul>li{
-    font: 100 12px/30px "微软雅黑";
-    color: #949597;
-    padding: 0 6px;
-    display: block;
-    float: left;
-}
-.nw>ul>li>a {
-    text-decoration: none;
-    color: #949597;
-}
-.nw>ul>li>a:hover{
-color:#F10215;
-}
 .nw .tl {
     float: left;
 }
-.nw .tr{
+
+.nw .tr {
     float: right;
 }
+
+.nw ul li {
+    font: 100 12px/30px "微软雅黑";
+    color: #949597;
+    padding: 0 8px;
+    display: block;
+    float: left;
+}
+
+.nw .more {
+    position: relative;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #e3e4e6;
+}
+
+.nw .more:hover {
+    border-color: #ccc;
+    background-color: #fff;
+}
+
+.nw .tr .m_l {
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    margin-left: 4px;
+    background: url("../img/pic/more.png") no-repeat 0 10px;
+    background-size: 12px 12px;
+}
+.nw .more .m_d{
+
+    position: absolute;
+    background-color: #fff;
+}
+.nw .more .m_d div{
+    width: 100px;
+    height: 100px;
+}
+.nw .v_line {
+    padding: 0;
+    height: 12px;
+    margin: 9px 4px;
+    width: 1px;
+    background: #ccc;
+}
+
+.nw .b_logo {
+    padding-left: 0;
+}
+
+.nw .b_logo a {
+    display: inline-block;
+    width: 194px;
+    overflow: hidden;
+
+}
+
+.nw a {
+    text-decoration: none;
+    color: #949597;
+}
+
+.nw li a:hover {
+    color: #F10215;
+
+}
+
+/*顶部导航栏END*/
+
+
+
+
+
