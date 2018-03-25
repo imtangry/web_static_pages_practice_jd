@@ -134,7 +134,7 @@ ul {
 
 .m_d .m_d_t {
     margin-bottom: -10px;
-    padding-top: 4px;
+    margin-top: 4px;
     width: 172px;
     font-weight: bold;
     text-indent: 1.5em;
@@ -153,11 +153,61 @@ ul {
 
 /*第三个下拉框*/
 .anav {
+    display: block;
+    width: 1190px;
+    height: 181px;
+    left: -1037px;
+}
+
+.anav .blank_line {
+    left: 1036px;
+    top: -1px;
+}
+
+/*重写部分第三个下拉框中小标题的样式*/
+.anav .m_d_t {
+    height: 24px;
+    width: 360px;
+    text-indent: 1.3em;
+    margin-bottom: -4px;
+    margin-top: 0;
+}
+
+.anav li {
+    float: left;
+}
+
+.anav div + .m_d_item {
+    width: 360px;
+}
+
+.anav .m_d_item {
+    margin-top: 15px;
+    height: 152px;
+}
+
+/*第三个下拉框中第一个表格中的li*/
+.anav div:nth-child(2) li {
+    width: 75px;
+}
+
+.anav .m_d_item + .m_d_item li {
+    width: 75px;
+}
+
+.anav .m_d_item + .m_d_item .m_d_t {
+    width: 276px;
 }
 
 /*格式化下拉框中DIV*/
 .nw .more .m_d div {
     float: left;
+}
+
+/*后三个div是统一的，且li也可以复用*/
+.nw .more .anav .m_d_item + .m_d_item {
+    width: 275px;
+    border-left: 1px solid #EEE;
 }
 
 /*li之间的竖线间隔的实现*/
