@@ -24,3 +24,10 @@ var kitty = new Cat('Kitty');
 var heo=new Cat('Heo');
 kitty.say();
 console.log( kitty.say === heo.say);
+
+var a=2;
+(function () {
+    // 如果a是参数传入，我们可以把它当做是局部变量
+a=3;
+})();
+console.log(a)

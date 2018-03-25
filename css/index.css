@@ -7,21 +7,30 @@ body {
     background: #F0F3EF;
 }
 
+ul {
+    list-style: none;
+}
+
+.clear_b {
+    clear: both;
+}
+
 /*顶部导航栏START*/
 .top_nav {
     position: relative;
     background: #e3e4e6;
-    width: 100%;
     height: 30px;
 }
 
 .nw {
+    background: #e3e4e6;
     height: 30px;
     width: 1190px;
     margin: 0 auto;
 }
 
-.nw ul {
+/*顶部栏的左右表格*/
+.nw tl, .nw tr {
     display: block;
     list-style: none;
 }
@@ -34,7 +43,8 @@ body {
     float: right;
 }
 
-.nw ul li {
+/*表格中的li*/
+.nw > ul > li {
     font: 100 12px/30px "微软雅黑";
     color: #949597;
     padding: 0 8px;
@@ -42,6 +52,7 @@ body {
     float: left;
 }
 
+/*三个有下拉选项的li*/
 .nw .more {
     position: relative;
     border-width: 0 1px;
@@ -49,11 +60,18 @@ body {
     border-color: #e3e4e6;
 }
 
+/*下拉选项的li的hover*/
 .nw .more:hover {
     border-color: #ccc;
     background-color: #fff;
 }
 
+/*作为下拉框的DIV*/
+.nw .more:hover > .m_d {
+    display: block;
+}
+
+/*顶部栏，右边表格中，下拉选项的li中的下拉小箭头*/
 .nw .tr .m_l {
     display: inline-block;
     width: 12px;
@@ -62,15 +80,87 @@ body {
     background: url("../img/pic/more.png") no-repeat 0 10px;
     background-size: 12px 12px;
 }
-.nw .more .m_d{
 
+/*作为下拉框的DIV*/
+.nw .more .m_d {
+    display: none;
     position: absolute;
+    border: 1px solid #cccccc;
     background-color: #fff;
 }
-.nw .more .m_d div{
-    width: 100px;
-    height: 100px;
+
+/*第一个下拉框*/
+.mjd {
+    left: -1px;
+    top: 29px;
+    width: 260px;
+    height: 150px;
 }
+
+/*格式化下拉框中的li*/
+.nw .more .m_d li {
+    height: 20px;
+    margin-top: 4px;
+    margin-left: 15px;
+}
+
+/*实现部分白色边框的div的通用css*/
+.nw .m_d .blank_line {
+    /*要考虑权重*/
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+}
+
+/*实现空白部分边框的div*/
+.mjd .blank_line {
+    top: -1px;
+}
+
+/*第一个下拉框中的div样式*/
+.mjd div {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+/*第二个下拉框*/
+.cser {
+    width: 172px;
+    height: 249px;
+    left: -93px;
+    top: 29px;
+}
+
+.m_d .m_d_t {
+    margin-bottom: -10px;
+    padding-top: 4px;
+    width: 172px;
+    font-weight: bold;
+    text-indent: 1.5em;
+    color: #666;
+}
+
+.cser div {
+    width: 86px;
+    margin-bottom: 12px;
+}
+
+.cser .blank_line {
+    left: 92px;
+    top: -1px;
+}
+
+/*第三个下拉框*/
+.anav {
+}
+
+/*格式化下拉框中DIV*/
+.nw .more .m_d div {
+    float: left;
+}
+
+/*li之间的竖线间隔的实现*/
 .nw .v_line {
     padding: 0;
     height: 12px;
@@ -79,10 +169,12 @@ body {
     background: #ccc;
 }
 
+/*大logo*/
 .nw .b_logo {
     padding-left: 0;
 }
 
+/*大logo中的a标签*/
 .nw .b_logo a {
     display: inline-block;
     width: 194px;
@@ -90,14 +182,15 @@ body {
 
 }
 
+/*格式化顶部栏的a标签，有通用*/
 .nw a {
     text-decoration: none;
     color: #949597;
 }
 
+/*格式化顶部栏a标签的hover动作，有通用*/
 .nw li a:hover {
     color: #F10215;
-
 }
 
 /*顶部导航栏END*/
