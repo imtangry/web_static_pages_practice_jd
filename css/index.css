@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
 }
 
 body {
@@ -11,8 +12,29 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .clear_b {
     clear: both;
+}
+
+/*格式化部分链接*/
+.link li {
+
+    color: #999;
+    font: 100 11px/30px "微软雅黑";
+    display: block;
+    float: left;
+}
+
+.link a {
+    color: #999;
+}
+
+.link a:hover {
+    color: #F10215;
 }
 
 /*顶部导航栏START*/
@@ -45,11 +67,7 @@ ul {
 
 /*表格中的li*/
 .nw > ul > li {
-    font: 100 12px/30px "微软雅黑";
-    color: #949597;
     padding: 0 8px;
-    display: block;
-    float: left;
 }
 
 /*三个有下拉选项的li*/
@@ -245,6 +263,55 @@ ul {
 
 /*顶部导航栏END*/
 
+/*顶部搜索栏START*/
+.top_search {
+    padding-top: 25px;
+    width: 1190px;
+    height: 115px;
+    margin: 0 auto;
+    border: 1px solid #F10215;
+}
+
+/*搜索框*/
+.s_box {
+    float: left;
+    margin-left: 80px;
+}
+
+/*搜索框下的东西*/
+.search {
+    background-color: olivedrab;
+    width: 550px;
+    height: 35px;
+}
+
+.search input {
+    outline: none;
+    font-weight: 100;
+    font-size: 18px;
+    display: block;
+    width: 500px;
+    height: 35px;
+    background-color: #ffffff;
+    float: left;
+
+}
+.search button{
+    display: block;
+    float: left;
+    height: 35px;
+    width: 50px;
+    background-color: #F10215;
+}
+
+/*搜索框下的东西*/
+.s_option {
+
+}
+
+.s_option .link li {
+    padding-right: 15px;
+}
 
 
 
