@@ -1,0 +1,119 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f0f3ef;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pc {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.icon-l {
+    cursor: text;
+    padding-right: 6px;
+}
+.icon-r{
+    cursor: text;
+    padding-left: 4px;
+}
+
+.red {
+    color: #F10215 !important;
+}
+.top .v_line{
+    height: 10px;
+    padding: 0;
+    width: 1px;
+    margin: 11px 4px 0;
+    background-color: #cccccc;
+}
+
+/*
+ *  #e3e4e5 背景
+ *  #ddd 边框
+ *  #999 字体
+ *  #f10215 红色
+ */
+/*顶部导航栏*/
+.top {
+    position: relative;
+    min-width: 1190px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
+.top a{
+    color:#999999;
+}
+.top a:hover{
+    color: #F10215;
+}
+.top .s_nav {
+    font: 100 12px/30px 微软雅黑;
+    color: #999;
+    background-color: #e3e4e5;
+    height: 30px;
+}
+
+.top li {
+    float: left;
+    padding: 0 7px;
+    height: 30px;
+}
+.top .more{
+    padding: 0;
+}
+.top .dt{
+    padding: 0 7px;
+    height: 28px;
+    border: 1px solid #e3e4e5;
+}
+.top .dt:hover {
+    background-color: #ffffff;
+    height: 29px;
+    border: 1px solid #cccccc;
+    border-bottom: 1px solid #ffffff;
+}
+.top .fl li:first-child{
+    padding-left: 0px;
+}
+.top .more {
+    position: relative;
+    height: 29px;
+
+}
+.location{
+    margin-right: 6px;
+}
+
+.top .b_logo{
+    position: relative;
+    display: block;
+    width: 190px;
+    height: 170px;
+    background: url("../img/pic/sprite.head.png") no-repeat left;
+    box-shadow: 1px -1px 4px  #dddddd;
+}
+.fa{
+    cursor: text;
+}
+
