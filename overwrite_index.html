@@ -5,12 +5,22 @@
     <title>重写首页</title>
     <link rel="stylesheet" href="css/overwrite_index.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
 </head>
+
+<body>
 <div class="top">
     <div class="pc s_nav">
         <ul class="fl">
             <li><a class="b_logo" href="#"></a></li>
-            <li class="location more"><div class="dt"><span class="icon-l  red fa fa-map-marker fa-lg"></span>北京</div></li>
+            <li class="location more">
+                <div class="dt"><span class="icon-l  red fa fa-map-marker fa-lg"></span>北京</div>
+                <div id="city">
+                    <div class="item" v-for="item in city">
+                        <a href="#" v-bind:data-id="item.data_id"  >{{item.city}}</a>
+                    </div>
+                </div>
+            </li>
         </ul>
         <ul class="fr">
             <li><a class="red" href="#">你好，请登录</a></li>
@@ -32,7 +42,18 @@
         </ul>
     </div>
 </div>
-<body>
 
+
+
+
+
+
+
+
+<!--<div id="app1">-->
+    <!--<p>{{message}}</p>-->
+<!--</div>-->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="./js/overwrite_index.js"></script>
 </body>
 </html>

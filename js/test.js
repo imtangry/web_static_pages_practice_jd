@@ -42,3 +42,7 @@ bn="12"
 cn=bn-0;
 console.log(typeof(cn));
 // 原型链上加的方法，才会是===的？？？
+
+for(var i=0;i<35;i++){
+    console.log("{data_id: "+i+", city: \"\"},")
+}

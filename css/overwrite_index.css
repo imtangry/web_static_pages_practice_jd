@@ -47,6 +47,9 @@ a {
     margin: 11px 4px 0;
     background-color: #cccccc;
 }
+.item{
+    float: left;
+}
 
 /*
  *  #e3e4e5 背景
@@ -80,6 +83,7 @@ a {
     height: 30px;
 }
 .top .more{
+    position: relative;
     padding: 0;
 }
 .top .dt{
@@ -117,3 +121,28 @@ a {
     cursor: text;
 }
 
+/*几个下拉框*/
+/*城市下拉框*/
+#city{
+    top: 30px;
+    position: absolute;
+    width: 300px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow:1px 2px 1px #dddddd ;
+}
+#city a{
+    line-height: 24px;
+    height: 24px;
+    float: left;
+    padding: 0 6px;
+}
+#city a:hover{
+    background-color: #f4f4f4;
+}
+#city .item{
+    padding: 2px 0;
+    height: 24px;
+    width: 60px;
+}
