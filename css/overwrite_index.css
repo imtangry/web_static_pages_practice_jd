@@ -46,6 +46,7 @@ a {
 }
 
 .b_red {
+    color: #ffffff;
     background-color: #F10215 !important;
 }
 
@@ -63,7 +64,7 @@ a {
 }
 
 .s_nav {
-    font: 100 12px/30px 微软雅黑;
+    font: 100 12px 微软雅黑;
     color: #999;
 }
 
@@ -74,6 +75,7 @@ a {
 .s_nav a:hover {
     color: #F10215;
 }
+
 /*
  *  #e3e4e5 背景
  *  #ddd 边框
@@ -99,6 +101,7 @@ a {
 .top .s_nav {
     background-color: #e3e4e5;
     height: 30px;
+    line-height: 30px;
 }
 
 .top li {
@@ -107,25 +110,12 @@ a {
     height: 30px;
 }
 
-.top .more {
-    position: relative;
-    padding: 0;
-}
-
 .top .dt {
     position: relative;
-    z-index: 20;
+    z-index: 200;
     padding: 0 7px;
     height: 28px;
     border: 1px solid #e3e4e5;
-}
-
-.top .more:hover .dt {
-    background-color: #ffffff;
-    height: 29px;
-    border: 1px solid #cccccc;
-    padding-bottom: 1px;
-    border-bottom: none;
 }
 
 .top .fl li:first-child {
@@ -135,7 +125,15 @@ a {
 .top .more {
     position: relative;
     height: 29px;
+    padding: 0;
+}
 
+.top .more:hover .dt {
+    background-color: #ffffff;
+    height: 29px;
+    border: 1px solid #cccccc;
+    padding-bottom: 1px;
+    border-bottom: none;
 }
 
 .top .more:hover .m_d {
@@ -282,7 +280,9 @@ a {
     padding-top: 25px;
     overflow: hidden;
 }
-
+.head .search a{
+    line-height: 20px;
+}
 .head .search {
     position: relative;
     float: left;
@@ -303,10 +303,29 @@ a {
 .head .search button {
     width: 50px;
     height: 35px;
+    outline: none;
 }
+
 .head .search .item {
     height: 20px;
     margin-right: 10px;
 }
 
+.head .cart {
+    position: relative;
+    float: left;
+    left: 390px;
+    width: 188px;
+    height: 33px;
+    border: 1px solid #e3e4e5;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 35px!important;
+}
+
+.head .cart:hover{
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    padding-bottom: 1px;
+}
 

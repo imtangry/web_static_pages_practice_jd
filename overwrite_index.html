@@ -118,14 +118,17 @@
 
 <div id="v_head" class="head pc">
     <div class="search">
-        <input type="text"><button class="b_red"></button>
+        <input type="text"><button class="b_red fa fa-search fa-lg"></button>
         <ul class="s_nav">
-            <li v-for="item in headList">
-                <div class="item">
-                    <a href="#">{{item.option}}</a>
+            <li v-for="(item,index) in headList">
+                <div class="item" >
+                    <a href="#" v-bind:class="{'red':(index==0)}">{{item.option}}</a>
                 </div>
             </li>
         </ul>
+    </div>
+    <div class="cart s_nav">
+        <a href="#" class="red">我的购物车</a>
     </div>
     <div class="nav"></div>
 </div>
