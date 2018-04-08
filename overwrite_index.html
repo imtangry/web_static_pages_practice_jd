@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>重写首页</title>
+    <link rel="stylesheet" href="css/overwrite_index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<div class="top">
+    <div class="pc s_nav">
+        <ul class="fl">
+            <li><a class="b_logo" href="#"></a></li>
+            <li class="location more" id="top_more1">
+                <div class="dt"><span class="icon-l  red fa fa-map-marker fa-lg"></span>{{city_selected}}</div>
+                <div id="city" class="m_d">
+                    <div class="item" v-for="item in city">
+                        <a class="" href="#" v-bind:data-id="item.data_id"
+                           v-bind:class="{'city_selected':item.selected}" @click="styleChange(item)">{{item.city}}</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="fr">
+            <li><a class="red" href="#">你好，请登录</a></li>
+            <li><a href="#">免费注册</a></li>
+            <li class="v_line"></li>
+            <li><a href="#">我的订单</a></li>
+            <li class="v_line"></li>
+
+            <li class="more">
+                <div class="dt"><a href="#">我的京东</a><span class="icon-r fa fa-angle-down fa-lg"></span></div>
+                <div id="my_jd" class="m_d">
+                    <div class="my_list list1">
+                        <div class="item" v-for="item in item1">
+                            <a href="#">{{item.option}}</a>
+                        </div>
+                    </div>
+                    <div class="my_list">
+                        <div class="item" v-for="item in item2">
+                            <a href="#">{{item.option}}</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="v_line"></li>
+            <li><a href="#">京东会员</a></li>
+            <li class="v_line"></li>
+            <li><a href="#">企业采购</a></li>
+            <li class="v_line"></li>
+
+            <li class="more">
+                <div class="dt"><span>客户服务</span><span class="icon-r fa fa-angle-down fa-lg"></span></div>
+                <div id="custom_s" class="m_d">
+                    <h4>客户</h4>
+                    <div class="my_list list1">
+                        <div class="item" v-for="item in item1">
+                            <a href="#">{{item.option}}</a>
+                        </div>
+                    </div>
+                    <h4>商户</h4>
+                    <div class="">
+                        <div class="item" v-for="item in item2">
+                            <a href="#">{{item.option}}</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="v_line"></li>
+
+            <li class="more">
+                <div class="dt"><span>网站导航</span><span class="icon-r fa fa-angle-down fa-lg"></span></div>
+                <div id="page_nav" class="m_d">
+                    <dl class="c1">
+                        <dt>特色主题</dt>
+                        <dd>
+                            <div class="item" v-for="item in item1">
+                                <a href="#">{{item.option}}</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="c2">
+                        <dt>行业频道</dt>
+                        <dd>
+                            <div class="item" v-for="item in item2">
+                                <a href="#">{{item.option}}</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="c2">
+                        <dt>生活服务</dt>
+                        <dd>
+                            <div class="item" v-for="item in item3">
+                                <a href="#">{{item.option}}</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="c2">
+                        <dt>更多精选</dt>
+                        <dd>
+                            <div class="item" v-for="item in item4">
+                                <a href="#">{{item.option}}</a>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+
+            <li class="v_line"></li>
+            <li><span>手机京东</span></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--<div id="app1">-->
+<!--<p>{{message}}</p>-->
+<!--</div>-->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="./js/overwrite_index.js"></script>
+</body>
+</html>

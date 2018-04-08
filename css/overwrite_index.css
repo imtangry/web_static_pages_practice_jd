@@ -1,0 +1,260 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f0f3ef;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pc {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.icon-l {
+    width: 10px;
+    cursor: text;
+    padding-right: 6px;
+}
+
+.icon-r {
+    width: 10px;
+    cursor: text;
+    padding-left: 4px;
+}
+
+.red {
+    color: #F10215 !important;
+}
+
+.top .v_line {
+    height: 10px;
+    padding: 0;
+    width: 1px;
+    margin: 11px 4px 0;
+    background-color: #cccccc;
+}
+
+.item {
+    float: left;
+    height: 24px;
+}
+
+/*
+ *  #e3e4e5 背景
+ *  #ddd 边框
+ *  #999 字体
+ *  #f10215 红色
+ */
+/*顶部导航栏*/
+.top {
+    position: relative;
+    min-width: 1190px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
+
+.top a {
+    color: #999999;
+}
+
+.top a:hover {
+    color: #F10215;
+}
+
+.top .s_nav {
+    font: 100 12px/30px 微软雅黑;
+    color: #999;
+    background-color: #e3e4e5;
+    height: 30px;
+}
+
+.top li {
+    float: left;
+    padding: 0 7px;
+    height: 30px;
+}
+
+.top .more {
+    position: relative;
+    padding: 0;
+}
+
+.top .dt {
+    position: relative;
+    z-index: 20;
+    padding: 0 7px;
+    height: 28px;
+    border: 1px solid #e3e4e5;
+}
+
+.top .more:hover .dt {
+    background-color: #ffffff;
+    height: 29px;
+    border: 1px solid #cccccc;
+    padding-bottom: 1px;
+    border-bottom: none;
+}
+
+.top .fl li:first-child {
+    padding-left: 0px;
+}
+
+.top .more {
+    position: relative;
+    height: 29px;
+
+}
+
+.top .more:hover .m_d {
+    display: block;
+}
+
+.location {
+    margin-right: 6px;
+}
+
+.top .b_logo {
+    position: relative;
+    display: block;
+    width: 190px;
+    height: 170px;
+    background: url("../img/pic/sprite.head.png") no-repeat left;
+    /*box-shadow: 1px -1px 4px #dddddd;*/
+}
+
+.fa {
+    cursor: text;
+}
+
+/*几个下拉框*/
+.more .m_d {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 1px 2px 1px #dddddd;
+    top: 30px;
+}
+
+.my_list {
+    overflow: hidden;
+}
+
+/*城市下拉框*/
+#city {
+    width: 300px;
+    padding: 10px;
+}
+
+#city a {
+    line-height: 24px;
+    height: 24px;
+    float: left;
+    padding: 0 6px;
+}
+
+#city a:hover {
+    background-color: #f4f4f4;
+}
+
+#city .item {
+    padding: 2px 0;
+
+    width: 60px;
+}
+
+#city .city_selected {
+    color: #ffffff !important;
+    background-color: #F10215 !important;
+}
+
+/*我的京东下拉框*/
+#my_jd {
+    width: 282px;
+}
+
+#my_jd .item {
+    width: 124px;
+}
+
+#my_jd .my_list {
+    padding: 10px 0 10px 15px;
+}
+
+#my_jd .list1 {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+/*客户服务下拉框*/
+#custom_s {
+    left: -96px;
+    width: 172px;
+    padding: 10px 0;
+}
+
+#custom_s .item {
+    width: 70px;
+    padding-left: 15px;
+}
+
+#custom_s h4 {
+    text-indent: 1.2em;
+    height: 24px;
+    line-height: 24px;
+}
+
+#custom_s .list1 {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#custom_s .my_list {
+
+}
+/*网站导航下拉框*/
+#page_nav{
+    padding: 15px 0;
+    width: 1190px;
+    left:-1042px;
+}
+#page_nav dl{
+    padding-left: 20px;
+    float: left;
+}
+#page_nav dt{
+    color: #666;
+    font-weight: 900;
+}
+#page_nav .c1{
+    width: 340px;
+}
+#page_nav .c2{
+    width: 255px;
+    border-left: 1px solid #f1f1f1;
+}
+#page_nav dl .item{
+    width: 85px;
+}
+
+
+
