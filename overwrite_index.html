@@ -116,11 +116,29 @@
     </div>
 </div>
 
+<div id="v_head" class="head pc">
+    <div class="search">
+        <input type="text"><button class="b_red"></button>
+        <ul class="s_nav">
+            <li v-for="item in headList">
+                <div class="item">
+                    <a href="#">{{item.option}}</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav"></div>
+</div>
+<div class="content_list"></div>
+<div class="content_more"></div>
+<footer>
 
+</footer>
 <!--<div id="app1">-->
 <!--<p>{{message}}</p>-->
 <!--</div>-->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+<script src="./js01/vue.js"></script>
 <script src="./js/overwrite_index.js"></script>
 </body>
 </html>

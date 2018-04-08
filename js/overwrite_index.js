@@ -118,10 +118,10 @@ var city = new Vue({
         }
     }),
 
-    page_nav=new Vue({
-        el:"#page_nav",
-        data:{
-            item1:[
+    page_nav = new Vue({
+        el: "#page_nav",
+        data: {
+            item1: [
                 {option: "京东试用"},
                 {option: "京东金融"},
                 {option: "全球售"},
@@ -143,7 +143,7 @@ var city = new Vue({
                 {option: "陪伴计划"},
                 {option: "出海招商"}
             ],
-            item2:[
+            item2: [
                 {option: "手机"},
                 {option: "智能数码"},
                 {option: "玩3C"},
@@ -160,7 +160,7 @@ var city = new Vue({
                 {option: "图书"},
                 {option: "京东元器件"}
             ],
-            item3:[
+            item3: [
                 {option: "京东众筹"},
                 {option: "白条"},
                 {option: "京东金融App"},
@@ -177,7 +177,7 @@ var city = new Vue({
                 {option: "京东众测"},
                 {option: "游戏"}
             ],
-            item4:[
+            item4: [
                 {option: "合作招商"},
                 {option: "京东通信"},
                 {option: "京东E卡"},
@@ -192,7 +192,22 @@ var city = new Vue({
                 {option: "知识产权维权"}
             ]
         }
-    })
+    }),
+    head = new Vue({
+        el: "#v_head",
+        data: {
+            test:"test",
+            headList: [
+                {option: "多买多折扣"},
+                {option: "手机上新"},
+                {option: "12期免息"},
+                {option: "万店4免1"},
+                {option: "多件多折"},
+                {option: "眼镜节"},
+                {option: "养殖必备"}
+            ]
+        }
+    });
 
 
 // 还是用js写第一个下拉表格的效果

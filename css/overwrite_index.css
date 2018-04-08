@@ -45,6 +45,10 @@ a {
     color: #F10215 !important;
 }
 
+.b_red {
+    background-color: #F10215 !important;
+}
+
 .top .v_line {
     height: 10px;
     padding: 0;
@@ -58,6 +62,18 @@ a {
     height: 24px;
 }
 
+.s_nav {
+    font: 100 12px/30px 微软雅黑;
+    color: #999;
+}
+
+.s_nav a {
+    color: #999999;
+}
+
+.s_nav a:hover {
+    color: #F10215;
+}
 /*
  *  #e3e4e5 背景
  *  #ddd 边框
@@ -81,8 +97,6 @@ a {
 }
 
 .top .s_nav {
-    font: 100 12px/30px 微软雅黑;
-    color: #999;
     background-color: #e3e4e5;
     height: 30px;
 }
@@ -138,7 +152,7 @@ a {
     width: 190px;
     height: 170px;
     background: url("../img/pic/sprite.head.png") no-repeat left;
-    /*box-shadow: 1px -1px 4px #dddddd;*/
+    box-shadow: 2px -1px 4px #dddddd;
 }
 
 .fa {
@@ -149,6 +163,7 @@ a {
 .more .m_d {
     display: none;
     position: absolute;
+    z-index: 99;
     background-color: #ffffff;
     border: 1px solid #cccccc;
     box-shadow: 1px 2px 1px #dddddd;
@@ -231,30 +246,67 @@ a {
 #custom_s .my_list {
 
 }
+
 /*网站导航下拉框*/
-#page_nav{
+#page_nav {
     padding: 15px 0;
     width: 1190px;
-    left:-1042px;
+    left: -1042px;
 }
-#page_nav dl{
+
+#page_nav dl {
     padding-left: 20px;
     float: left;
 }
-#page_nav dt{
+
+#page_nav dt {
     color: #666;
     font-weight: 900;
 }
-#page_nav .c1{
+
+#page_nav .c1 {
     width: 340px;
 }
-#page_nav .c2{
+
+#page_nav .c2 {
     width: 255px;
     border-left: 1px solid #f1f1f1;
 }
-#page_nav dl .item{
+
+#page_nav dl .item {
     width: 85px;
 }
 
+/*头部的搜索和一些导航栏*/
+.head {
+    padding-top: 25px;
+    overflow: hidden;
+}
+
+.head .search {
+    position: relative;
+    float: left;
+    left: 320px;
+    width: 550px;
+}
+
+.head .search input {
+    display: block;
+    float: left;
+    outline: none;
+    width: 450px;
+    height: 25px;
+    padding: 4px 44px 4px 4px;
+    border: 1px solid transparent;
+}
+
+.head .search button {
+    width: 50px;
+    height: 35px;
+}
+.head .search .item {
+    height: 20px;
+    margin-right: 10px;
+}
 
 
