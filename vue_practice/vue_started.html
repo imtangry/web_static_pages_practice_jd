@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Started</title>
+    <script src="../js01/vue.js"></script>
+</head>
+<body>
+
+<!--声明式渲染-->
+<div id="app-1">
+    {{message}}
+</div>
+
+<!--绑定元素特性,这里怎么报错了？-->
+<div id="app-2" style="border: 1px solid black">
+    <!--冒号后面一般是一个标签的属性？所以叫绑定元素特性？-->
+        <span v-bind:title="message">
+            鼠标悬停几秒钟查看此处动态绑定的提示信息！v-bind可以直接缩写为一个:
+        </span>
+</div>
+
+<!--条件-->
+<div id="app-3">
+    <p v-if="seen">这是判断</p>
+</div>
+
+<!--循环-->
+<div id="app-4">
+    <ol>
+        <li v-for="item in todos">
+            {{item.text}}
+        </li>
+    </ol>
+</div>
+
+<!--监听器-->
+<div id="app-5">
+    <p>{{message}}</p>
+    <button v-on:click="reverse">逆转消息，v-on可以直接缩写为@</button>
+</div>
+
+<!--组件模板-->
+<div id="app-6">
+    <p>{{message}}</p>
+    <ol>
+        <todo-item
+                v-for="item in list"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+                v-bind:class="item.id"
+        >
+        </todo-item>
+    </ol>
+</div>
+
+<!--双向绑定-->
+<div id="app-7">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+</div>
+<script src="../js01/vue_started.js"></script>
+</body>
+</html>
