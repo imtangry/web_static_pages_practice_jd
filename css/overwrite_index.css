@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+.clear {
+    clear: both;
+}
+
 body {
     background-color: #f0f3ef;
 }
@@ -278,11 +282,13 @@ a {
 /*头部的搜索和一些导航栏*/
 .head {
     padding-top: 25px;
-    overflow: hidden;
+
 }
-.head .search a{
+
+.head .search a {
     line-height: 20px;
 }
+
 .head .search {
     position: relative;
     float: left;
@@ -312,20 +318,57 @@ a {
 }
 
 .head .cart {
+    z-index: 88;
     position: relative;
-    float: left;
-    left: 390px;
     width: 188px;
     height: 33px;
     border: 1px solid #e3e4e5;
     background-color: #ffffff;
     text-align: center;
-    line-height: 35px!important;
+    line-height: 35px !important;
 }
 
-.head .cart:hover{
+.head .car_icon {
+    padding-right: 4px;
+}
+
+.head .mount_icon {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 138px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #F10215;
+    color: #ffffff;
+    font: 100 12px/15px 微软雅黑;
+}
+
+.head .cart_item {
+    position: relative;
+    float: left;
+    left: 350px;
+    width: 188px;
+}
+
+.head .cart_item:hover .more {
+    display: block;
+}
+
+.head .cart_item:hover .cart {
     border: 1px solid #cccccc;
     border-bottom: none;
     padding-bottom: 1px;
 }
 
+.head .cart_item .more {
+    display: none;
+    position: absolute;
+    top: 34px;
+    left: -120px;
+    width: 308px;
+    height: 200px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
