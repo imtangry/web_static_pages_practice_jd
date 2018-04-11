@@ -1,5 +1,7 @@
 ​        函数本身有个prototype，在使用call继承时，这个prototype不会自动指向父类的prototype。这是后需要手动指向，之后prototype里的constructor指向了父类函数本身。这是也需要手动指向这个构造函数本身。
 
+
+
 ​        访问属性或方法时会层层查找，无法匹配就会显示undefined。
 
 ​        任何想要被继承的方法都应该被写在prototype对象里，并永远使用父类的prototype来创造子类的prototype。
@@ -25,6 +27,13 @@ var t1 = new Teacher("Lily", 12, 'math');
 t1.say = function () {
     console.log("重写");
 }
+console.log(t1.__proto__===Teacher.__proto__);//false,这里会出现错误，廖雪峰博客实现了一个空函数,
+console.log(t1.__proto__.__proto__===Person.__proto__);//false,
+//function F(){};
+//F.prototype=Person.prototype;
+//Teacher.prototype=new F();
+//Teacher.prototype.constructor=Teacher;
+//这些代码可以封装起来。
 ```
 ​        call里面的参数指的是使用call方法的那个函数的参数。而且此时this参数中的this不会指向call中this的参数了。
 
