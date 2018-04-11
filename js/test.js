@@ -9,7 +9,7 @@ var robot = {
 };
 var student = {};
 student.__proto__ = robot;
-student.name = "xiaomin";
+student.name = "";
 student.say();
 console.log(student.__proto__);
 console.log(student.weight);
