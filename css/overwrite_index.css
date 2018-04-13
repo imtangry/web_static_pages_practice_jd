@@ -327,14 +327,15 @@ a {
 
 .cart_item {
     position: relative;
+    z-index: 1;
     float: left;
     left: 350px;
     width: 188px;
     height: 33px;
-
 }
 
 .head .cart {
+
     width: 188px;
     height: 33px;
     border: 1px solid #e3e4e5;
@@ -346,6 +347,7 @@ a {
 .cart_item .more {
     display: none;
     position: absolute;
+    z-index: -1;
     top: 34px;
     left: -120px;
     width: 308px;
@@ -384,7 +386,7 @@ a {
     left: 200px;
     width: 790px;
     height: 40px;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .head > .nav a {
@@ -430,18 +432,53 @@ a {
 .content_list a {
     color: #626262;
 }
-.content_list .list li:hover{
+
+.content_list .list li:hover {
     background-color: #dddddd;
 }
+
+.content_list .list li:hover>.more{
+display: block;
+}
+
 .content_list a:hover {
     color: #F10215;
 }
+
+.v_line {
+    float: left;
+    width: 0;
+    height: 10px;
+    padding: 0 1px;
+    background-color: #cccccc;
+}
+
 /*list下的分隔符*/
-.space{
+.space {
     display: inline-block;
     padding: 0 1px;
     font-size: 12px;
     color: #626262;
+}
+
+.content_list .imgs {
+    width: 570px;
+    height: 470px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.list .more {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 191px;
+    width: 1000px;
+    height: 480px;
+    border: 1px solid #f7f7f7;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px #ffffff, 0px -2px 4px #cccccc, 2px 0px 4px #888888, 0px 2px 2px #cccccc;
 }
 
 
