@@ -8,18 +8,24 @@
     clear: both;
 }
 
+.pointer {
+    cursor: pointer!important;
+}
+
 .show {
-    display: block !important;
     position: absolute;
+
+    display: block !important;
 }
 
 .b {
-    display: block
+    display: block;
 }
 
 .none {
-    display: none !important;
     position: absolute;
+
+    display: none !important;
 }
 
 body {
@@ -453,7 +459,7 @@ a {
 
 .list .more {
     position: absolute;
-    z-index: 99;
+    z-index: 199;
     top: 0;
     left: 191px;
     display: none;
@@ -488,51 +494,59 @@ a {
 
 .content_list .imgs {
     position: relative;
+    overflow: hidden;
     width: 590px;
     height: 470px;
     margin-top: 10px;
     margin-left: 10px;
     background-color: #fff;
-    overflow: hidden;
 }
 
 .imgs_list {
-
+    position: relative;
+    width: 590px;
+    height: 470px;
 }
 
 /*白色遮罩层*/
 .white_bg {
     position: absolute;
-    background-color: #ffffff;
+    z-index: 99;
     display: none;
     width: 590px;
     height: 470px;
+    background-color: #fff;
 }
 
 /*左按钮*/
 .l_button {
-    padding-top: 10px;
-    text-align: center;
-    color: #ffffff;
+    position: absolute;
+    z-index: 100;
     top: 221px;
     width: 24px;
     height: 30px;
-    position: absolute;
-    background-color: #000000;
-    opacity: 0.5;
+    padding-top: 10px;
+    text-align: center;
+    opacity: .5;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
 }
 
 /*右按钮*/
-.r_button { padding-top: 10px;
-    text-align: center;
-    color: #ffffff;
+.r_button {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
     top: 221px;
     left: 566px;
     width: 24px;
     height: 30px;
-    position: absolute;
-    background-color: #000000;
-    opacity: 0.5;
+    padding-top: 10px;
+    text-align: center;
+    opacity: .5;
+    color: #fff;
+    background-color: #000;
 }
 
 .l_button:hover {
@@ -542,6 +556,7 @@ a {
 .r_button:hover {
     opacity: 1;
 }
+
 
 
 
