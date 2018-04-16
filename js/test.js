@@ -53,3 +53,6 @@ console.log(typeof(cn));
 for(var i=0;i<35;i++){
     console.log("{data_id: "+i+", city: \"\"},")
 }
+
+console.log(parseInt('f*uk',16));
+console.log(parseInt('f*uk'));

@@ -39,8 +39,20 @@ Dom Tree的每个节点都有reflow方法，一个节点的reflow可能触发其
 5.不要使用table布局。
 6.避免不必要的复杂CSS选择器，尤其是后代选择器！
 
-CSS3的box-sizing：
+**CSS3的box-sizing**：
 设置盒子模型为标准模式或者IE模式。属性有三个：
 1.content-box：默认值，border和padding不计算到width。
 2.padding-box：padding算入width。
 3.border-box：border和padding都会算入width。
+
+取消冒泡的一种方法：event.cancleBubble=true;这种相当于全局取消事件冒泡。
+
+**window.onload=function(){...}和$(document).ready(function(){...})**
+1.js中需要等待图片等所有元素加载完毕才会执行，jq中则是等待DOM结构绘制完成即可执行。
+2.js这方法只能执行一个，jq编写多个入口函数，多个都会执行。
+3.如果需要等待所有元素加载完毕则使用$(window).load(function(){...}),这个相当于js中的window.onload。
+4.一些问题：jq3版本js入口函数总是会先执行。jq2版本是正常顺序，3版本好像在网页资源很少的时候js的入口函数就会先执行。
+5.jq可简写为$(function(){})
+
+jq--dom:$("selector")[index]/$("selector").get(index);
+dom--jq:$(dom);
