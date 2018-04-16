@@ -5,6 +5,7 @@ var global = function () {
     var imgs = dc.getElementsByClassName("test");
     var now = 0;
     var mount = pointer.length;
+
     // 定时器可以在全局设置一个对象，包含他，之后用push，装入数组
     // 绑定点击事件
     for (let i = 0; i < mount; i++) {
@@ -54,3 +55,4 @@ var global = function () {
         var taget = e.target;
     })
 }();
+setInterval()
