@@ -557,6 +557,24 @@ a {
     opacity: 1;
 }
 
+.circle_list{
+    position: absolute;
+    z-index: 100;
+    top: 430px;
+    left: 50px;
+    overflow: hidden;
+}
+.circle{
+    cursor: default;
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #cccccc;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
 
 
 
