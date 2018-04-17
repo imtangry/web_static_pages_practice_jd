@@ -56,3 +56,6 @@ Dom Tree的每个节点都有reflow方法，一个节点的reflow可能触发其
 
 **初步了解promise**：
 首先会执行Promise里的方法，方法里会有一个resolve和result，相当于两个指针，执行到一个就会触发相应的then或者是catch，then里是一个函数，接受的参数通过resolve传入。
+
+**onmouseover**:移动到子元素也会继续触发over。
+**onmouseenter**:子元素不会影响。
