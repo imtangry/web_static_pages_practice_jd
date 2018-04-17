@@ -47,12 +47,15 @@ Dom Tree的每个节点都有reflow方法，一个节点的reflow可能触发其
 
 取消冒泡的一种方法：event.cancleBubble=true;这种相当于全局取消事件冒泡。
 
-**window.onload=function(){...}和$(document).ready(function(){...})**
+**window.onload=function(){...}和$(document).ready(function(){...})**：
 1.js中需要等待图片等所有元素加载完毕才会执行，jq中则是等待DOM结构绘制完成即可执行。
 2.js这方法只能执行一个，jq编写多个入口函数，多个都会执行。
 3.如果需要等待所有元素加载完毕则使用$(window).load(function(){...}),这个相当于js中的window.onload。
 4.一些问题：jq3版本js入口函数总是会先执行。jq2版本是正常顺序，3版本好像在网页资源很少的时候js的入口函数就会先执行。
-5.jq可简写为$(function(){})
+5.jq可简写为$(function(){...})。
 
-jq--dom:$("selector")[index]/$("selector").get(index);
-dom--jq:$(dom);
+**初步了解promise**：
+首先会执行Promise里的方法，方法里会有一个resolve和result，相当于两个指针，执行到一个就会触发相应的then或者是catch，then里是一个函数，接受的参数通过resolve传入。
+
+**onmouseover**:移动到子元素也会继续触发over。
+**onmouseenter**:子元素不会影响。
