@@ -9,7 +9,7 @@ window.onload = function () {
         lis = d.getElementsByClassName("imgs_list")[0].getElementsByTagName("li"),
         l_b = d.getElementsByClassName("l_button")[0],
         r_b = d.getElementsByClassName("r_button")[0],
-        img_list = d.getElementsByClassName("imgs_list")[0],
+        img_list = d.getElementsByClassName("imgs")[0],
         circle_list = d.getElementsByClassName("circle"),
         l = lis.length,
         intervals_next = [],
@@ -27,7 +27,7 @@ window.onload = function () {
 
     img_list.onmouseenter = function (e) {
         e.stopPropagation();
-        // 这个会影响两个按钮之间的flag
+        // 这个会影响两个按钮之间的flag，换成enter和leave
         // change_flag = true;
         clear_reset();
     }
@@ -38,8 +38,9 @@ window.onload = function () {
     }
     // 会出bug，会重复触发鼠标移入移出。
     for (let i = 0; i < l; i++) {
-        circle_list[i].onmouseenter = function () {
-            if(i===imgs_now){
+        circle_list[i].onmouseover = function () {
+            console.log("点击的按钮索引为：" + i);
+            if (i === imgs_now) {
                 return;
             }
             change(2, i);
@@ -48,13 +49,21 @@ window.onload = function () {
 
 
 // 清除所有定时器，且快速完成未完成动画
-    function clear_reset() {
+    function clear_reset(mode) {
+        if (mode === 0) {
+            while (intervals_animate.length !== 0) {
+                clearInterval(intervals_animate.pop());
+            }
+            while (intervals_next.length !== 0) {
+                clearInterval(intervals_next.pop());
+            }
+            return;
+        }
         while (intervals_animate.length !== 0) {
             clearInterval(intervals_animate.pop());
         }
         while (intervals_next.length !== 0) {
             clearInterval(intervals_next.pop());
-
         }
         lis[imgs_pre].className = "none";
         lis[imgs_pre].style.opacity = "0";
@@ -75,15 +84,14 @@ window.onload = function () {
     }
 
     function click_change(mode) {
-        // 点击前清除定时器，点击后貌似会自动执行自动轮播
+        // 点击前清除定时器
         //防止多次点击，等待切换动画执行完在执行
-
         if (change_flag === false) {
             console.log("执行了这个");
             return;
         }
         change_flag = false;
-        clear_reset();
+        clear_reset(0);
         // 左点击
         if (mode === 0) {
             if (imgs_now === 0) {
@@ -106,6 +114,8 @@ window.onload = function () {
         while (intervals_animate.length > 0) {
             clearInterval(intervals_animate.pop());
         }
+        // 这里如果通过圆点切换图片时，重复选择一个圆点会出现bug，应该加一个判断，阻止程序继续执行,判断应该加在上一层
+
         imgs_pre = imgs_now;
         // 自动模式
         if (mode === 0) {
@@ -120,8 +130,11 @@ window.onload = function () {
         else {
             imgs_now = flag;
         }
-// 在底层执行pointer样式切换
+        console.log("现在显示的图片的索引："+imgs_now);
+        console.log("现在消失的图片的索引："+imgs_pre);
+        // 在底层执行pointer样式切换
         circle_style(imgs_now, imgs_pre);
+
         let cover_opacity = 50,
             pre_opacity = 100,
             temp_pre = lis[imgs_pre];
@@ -135,21 +148,23 @@ window.onload = function () {
         lis[imgs_now].style.zIndex = "49";
         // 设置上一个图
         temp_pre.style.opacity = "100";
-        temp_pre.style.zIndex = "0";
+        temp_pre.style.zIndex = "1";
 
         // 开始动画
         intervals_animate.push(setInterval(function () {
             console.log("动画循环执行");
-            cover_opacity = cover_opacity - 1;
+            cover_opacity = cover_opacity - 2;
             pre_opacity = pre_opacity - 4;
 
             cover.style.opacity = cover_opacity / 100;
             temp_pre.style.opacity = pre_opacity / 100;
 
             if (cover_opacity < 0) {
+
                 while (intervals_animate.length > 0) {
                     clearInterval(intervals_animate.pop());
                 }
+
                 cover.style.opacity = "0";
                 temp_pre.style.opacity = "0";
                 temp_pre.className = "none";
@@ -160,6 +175,7 @@ window.onload = function () {
                     }
                 }
                 cover.style.display = "none";
+
                 change_flag = true;
                 return;
             }
@@ -171,7 +187,7 @@ window.onload = function () {
     function circle_style(index, pre_index) {
         circle_list[pre_index].style.backgroundColor = "";
         circle_list[index].style.backgroundColor = "#ffffff";
-
     }
+
     auto_change();
 }
