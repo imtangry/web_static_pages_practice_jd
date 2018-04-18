@@ -11,18 +11,13 @@ window.onload = function () {
         r_b = d.getElementsByClassName("r_button")[0],
         img_list = d.getElementsByClassName("imgs_list")[0],
         circle_list = d.getElementsByClassName("circle"),
-    l = lis.length,
+        l = lis.length,
         intervals_next = [],
         intervals_animate = [],
         change_flag = true;
 
     l_b.addEventListener('click', function () {
-        console.log(imgs_pre);
-        console.log(imgs_now);
         click_change(0);
-        console.log(imgs_pre);
-        console.log(imgs_now);
-
     });
     r_b.addEventListener('click', function () {
         click_change(1);
@@ -33,7 +28,7 @@ window.onload = function () {
     img_list.onmouseenter = function (e) {
         e.stopPropagation();
         // 这个会影响两个按钮之间的flag
-        change_flag = true;
+        // change_flag = true;
         clear_reset();
     }
     img_list.onmouseleave = function (e) {
@@ -42,9 +37,12 @@ window.onload = function () {
 
     }
     // 会出bug，会重复触发鼠标移入移出。
-    for(let i=0;i<l;i++){
-        circle_list[i].onmouseover=function () {
-            change(2,i);
+    for (let i = 0; i < l; i++) {
+        circle_list[i].onmouseenter = function () {
+            if(i===imgs_now){
+                return;
+            }
+            change(2, i);
         }
     }
 
@@ -105,6 +103,9 @@ window.onload = function () {
 
 // 实现切换时的动画
     function change(mode, flag) {
+        while (intervals_animate.length > 0) {
+            clearInterval(intervals_animate.pop());
+        }
         imgs_pre = imgs_now;
         // 自动模式
         if (mode === 0) {
@@ -117,11 +118,10 @@ window.onload = function () {
         }
         // 列表按钮点击模式
         else {
-            imgs_now=flag;
+            imgs_now = flag;
         }
 // 在底层执行pointer样式切换
-        circle_style(imgs_now,imgs_pre);
-
+        circle_style(imgs_now, imgs_pre);
         let cover_opacity = 50,
             pre_opacity = 100,
             temp_pre = lis[imgs_pre];
@@ -147,6 +147,9 @@ window.onload = function () {
             temp_pre.style.opacity = pre_opacity / 100;
 
             if (cover_opacity < 0) {
+                while (intervals_animate.length > 0) {
+                    clearInterval(intervals_animate.pop());
+                }
                 cover.style.opacity = "0";
                 temp_pre.style.opacity = "0";
                 temp_pre.className = "none";
@@ -157,10 +160,6 @@ window.onload = function () {
                     }
                 }
                 cover.style.display = "none";
-
-                while (intervals_animate.length > 0) {
-                    clearInterval(intervals_animate.pop());
-                }
                 change_flag = true;
                 return;
             }
@@ -169,11 +168,10 @@ window.onload = function () {
 
     //小圆点hover，自动轮播，点击轮播时候变化样式
     //暂时实现切换，这个小点的动画也有点复杂。
-    function circle_style(index,pre_index) {
+    function circle_style(index, pre_index) {
         circle_list[pre_index].style.backgroundColor = "";
         circle_list[index].style.backgroundColor = "#ffffff";
 
     }
-
     auto_change();
 }
