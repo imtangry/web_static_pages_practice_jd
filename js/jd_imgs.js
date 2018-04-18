@@ -10,8 +10,8 @@ window.onload = function () {
         l_b = d.getElementsByClassName("l_button")[0],
         r_b = d.getElementsByClassName("r_button")[0],
         img_list = d.getElementsByClassName("imgs")[0],
-        circle_list = d.getElementsByClassName("circle");
-    l = lis.length,
+        circle_list = d.getElementsByClassName("circle"),
+        l = lis.length,
         intervals_next = [],
         intervals_animate = [],
         change_flag = true;
@@ -40,7 +40,7 @@ window.onload = function () {
     for (let i = 0; i < l; i++) {
         circle_list[i].onmouseover = function () {
             console.log("点击的按钮索引为：" + i);
-            if(i===imgs_now){
+            if (i === imgs_now) {
                 return;
             }
             change(2, i);
@@ -148,12 +148,12 @@ window.onload = function () {
         lis[imgs_now].style.zIndex = "49";
         // 设置上一个图
         temp_pre.style.opacity = "100";
-        temp_pre.style.zIndex = "0";
+        temp_pre.style.zIndex = "1";
 
         // 开始动画
         intervals_animate.push(setInterval(function () {
             console.log("动画循环执行");
-            cover_opacity = cover_opacity - 1;
+            cover_opacity = cover_opacity - 2;
             pre_opacity = pre_opacity - 4;
 
             cover.style.opacity = cover_opacity / 100;
@@ -187,7 +187,6 @@ window.onload = function () {
     function circle_style(index, pre_index) {
         circle_list[pre_index].style.backgroundColor = "";
         circle_list[index].style.backgroundColor = "#ffffff";
-
     }
 
     auto_change();
