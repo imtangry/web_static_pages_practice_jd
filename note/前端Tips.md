@@ -68,23 +68,3 @@ window.onload=function(){...}和$(document).ready(function(){...})
 
 #### require.js
 介绍：实现异步加载，简化很多js文件之间的依赖，加载，引入的表示方式。
-1.
-```javascript
-<script src="js/require.js"></script>
-<script src="js/require.js" data-main="js/main"></script>
-```
-2.
-```javascript
-// main.js
-　　require.config({
-　　　　paths: {
-　　　　　　"jquery": "lib/jquery.min",
-　　　　　　"underscore": "lib/underscore.min",
-　　　　　　"backbone": "lib/backbone.min"
-　　　　}
-　　});
-require(['jquery', 'underscore', 'backbone'], function ($,_,Backbone){
-　　　　// some code here
-　　});
-```
-
