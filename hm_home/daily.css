@@ -1,0 +1,134 @@
+.warp {
+    margin: 20px auto;
+    width: 536px;
+    height: 366px;
+    border: 2px 0 2px 2px;
+    border-style: solid;
+    border-color: #57abff;
+}
+
+.wl {
+    padding: 10px;
+}
+
+.title {
+    width: 388px;
+    height: 33px;
+}
+
+.week {
+    overflow: hidden;
+    width: 385px;
+    height: 33px;
+    border-top: 1px solid #5af;
+}
+
+.w7 {
+    text-align: center;
+    line-height: 33px;
+    display: block;
+    float: left;
+    width: 55px;
+    height: 33px;
+}
+
+.red {
+    color: #e02d2d;
+}
+
+.disable_c {
+    color: #bfbfbf;
+}
+
+select:focus {
+    outline: 0
+}
+
+#years {
+    width: 74px;
+    height: 24px;
+}
+
+#month {
+    width: 59px;
+    height: 24px;
+}
+
+#holiday {
+    width: 93px;
+    height: 24px;
+}
+
+button {
+    margin-bottom: 10px;
+    height: 24px;
+    border: 1px;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    outline: 1px solid #5af;
+}
+
+.days {
+    overflow: hidden;
+    width: 385px;
+    height: 45px;
+    border-top: 1px solid #bfbfbf;
+}
+
+.item {
+    cursor: pointer;
+    position: relative;
+    float: left;
+    margin-right: 1px;
+    height: 39px;
+    width: 48px;
+    border: 3px solid #fff;
+    text-align: center;
+
+}
+
+.item:hover {
+    border-color: #fb0;
+}
+
+.day_n {
+    display: block;
+    width: 48px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.day_c {
+    color: #999;
+    height: 20px;
+    display: block;
+    width: 48px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.day_s {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    font-size: 14px;
+    line-height: 13px;
+    color: #ffffff;
+}
+
+.day_rest {
+    display: block;
+    background-color: #f43;
+}
+
+.day_work {
+    display: block;
+    background-color: #969799;
+}
+
