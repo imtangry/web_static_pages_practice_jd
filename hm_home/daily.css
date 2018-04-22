@@ -1,13 +1,15 @@
 .warp {
+    width: 535px;
+    height: 363px;
     margin: 20px auto;
-    width: 536px;
-    height: 366px;
-    border: 2px 0 2px 2px;
+    border-width: 2px 0 2px 2px;
     border-style: solid;
     border-color: #57abff;
 }
 
 .wl {
+    float: left;
+    width: 385px;
     padding: 10px;
 }
 
@@ -24,15 +26,15 @@
 }
 
 .w7 {
-    text-align: center;
     line-height: 33px;
     display: block;
     float: left;
     width: 55px;
     height: 33px;
+    text-align: center;
 }
 
-.red {
+.warp .red {
     color: #e02d2d;
 }
 
@@ -41,7 +43,7 @@
 }
 
 select:focus {
-    outline: 0
+    outline: 0;
 }
 
 #years {
@@ -60,11 +62,11 @@ select:focus {
 }
 
 button {
-    margin-bottom: 10px;
     height: 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
     border: 1px;
     outline: none;
-    cursor: pointer;
 }
 
 button:hover {
@@ -79,15 +81,14 @@ button:hover {
 }
 
 .item {
-    cursor: pointer;
     position: relative;
     float: left;
-    margin-right: 1px;
-    height: 39px;
     width: 48px;
-    border: 3px solid #fff;
+    height: 39px;
+    margin-right: 1px;
+    cursor: pointer;
     text-align: center;
-
+    border: 3px solid #fff;
 }
 
 .item:hover {
@@ -95,31 +96,31 @@ button:hover {
 }
 
 .day_n {
+    line-height: 22px;
     display: block;
     width: 48px;
     height: 22px;
-    line-height: 22px;
 }
 
 .day_c {
-    color: #999;
-    height: 20px;
-    display: block;
-    width: 48px;
     font-size: 12px;
     line-height: 14px;
+    display: block;
+    width: 48px;
+    height: 20px;
+    color: #999;
 }
 
 .day_s {
-    display: none;
+    font-size: 14px;
+    line-height: 13px;
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
     width: 15px;
     height: 15px;
-    font-size: 14px;
-    line-height: 13px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .day_rest {
@@ -132,3 +133,77 @@ button:hover {
     background-color: #969799;
 }
 
+.wr {
+    float: left;
+    width: 130px;
+    height: 363px;
+    background-color: #5af;
+}
+
+span {
+    text-align: center;
+}
+
+.today {
+    display: block;
+    color: #ffffff;
+    width: 130px;
+    line-height: 48px;
+    font-size: 13px;
+    height: 48px;
+}
+
+.day_bn {
+    border-radius: 4px;
+    color: #ffffff;
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-color: #fb0;
+    margin: 0 auto;
+    font-size: 52px;
+    line-height: 75px;
+    box-shadow: -1px 0 2px rgb(000, 000, 000, 0.2),
+     0 0 0 rgb(000, 000, 000, 0.2),
+      1px 0 2px rgb(000, 000, 000, 0.2), 
+    0 2px 4px rgb(000, 000, 000, 0.2);
+    margin-bottom: 4px;
+}
+.more_info{
+    display: block;
+    color: #ffffff;
+    width: 130px;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.luck{
+    overflow: hidden;
+    width: 110px;
+    margin: 10px 10px 0 10px;
+    padding-top: 10px;
+    border-top: 2px solid #94c9ff;
+}
+.good{
+    width: 55px;
+    float: left;
+}
+.bad{
+    width: 55px;
+    float: left;
+}
+.details{
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+}
+.gi,.bi{
+    color: #ffffff;
+    font: 24px/30px 'Microsoft Yahei';
+    text-align: center;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 5px;
+}
