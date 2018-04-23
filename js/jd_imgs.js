@@ -1,7 +1,5 @@
 // 京东轮播图
 window.onload = function () {
-
-
     var d = document,
         imgs_now = 0,
         imgs_pre = 2,
@@ -23,7 +21,7 @@ window.onload = function () {
         click_change(1);
     });
 
-// 绑定事件
+    // 绑定事件
 
     img_list.onmouseenter = function (e) {
         e.stopPropagation();
@@ -48,7 +46,7 @@ window.onload = function () {
     }
 
 
-// 清除所有定时器，且快速完成未完成动画
+    // 清除所有定时器，且快速完成未完成动画
     function clear_reset(mode) {
         if (mode === 0) {
             while (intervals_animate.length !== 0) {
@@ -71,7 +69,7 @@ window.onload = function () {
         cover.style.opacity = 0;
     }
 
-// 首先实现自动轮播函数，鼠标移入停止轮播，移出则继续调用轮播函数
+    // 首先实现自动轮播函数，鼠标移入停止轮播，移出则继续调用轮播函数
     function auto_change() {
         // 没有鼠标事件，这个定时器将一直存在
         intervals_next.push(setInterval(function () {
@@ -109,7 +107,7 @@ window.onload = function () {
 
     }
 
-// 实现切换时的动画
+    // 实现切换时的动画
     function change(mode, flag) {
         while (intervals_animate.length > 0) {
             clearInterval(intervals_animate.pop());
@@ -130,8 +128,8 @@ window.onload = function () {
         else {
             imgs_now = flag;
         }
-        console.log("现在显示的图片的索引："+imgs_now);
-        console.log("现在消失的图片的索引："+imgs_pre);
+        console.log("现在显示的图片的索引：" + imgs_now);
+        console.log("现在消失的图片的索引：" + imgs_pre);
         // 在底层执行pointer样式切换
         circle_style(imgs_now, imgs_pre);
 
@@ -155,16 +153,12 @@ window.onload = function () {
             console.log("动画循环执行");
             cover_opacity = cover_opacity - 2;
             pre_opacity = pre_opacity - 4;
-
             cover.style.opacity = cover_opacity / 100;
             temp_pre.style.opacity = pre_opacity / 100;
-
             if (cover_opacity < 0) {
-
                 while (intervals_animate.length > 0) {
                     clearInterval(intervals_animate.pop());
                 }
-
                 cover.style.opacity = "0";
                 temp_pre.style.opacity = "0";
                 temp_pre.className = "none";
@@ -175,7 +169,6 @@ window.onload = function () {
                     }
                 }
                 cover.style.display = "none";
-
                 change_flag = true;
                 return;
             }
@@ -188,6 +181,5 @@ window.onload = function () {
         circle_list[pre_index].style.backgroundColor = "";
         circle_list[index].style.backgroundColor = "#ffffff";
     }
-
     auto_change();
 }
