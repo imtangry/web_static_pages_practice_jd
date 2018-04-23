@@ -2,8 +2,10 @@
 require.config({
     baseUrl: './js',
     paths: {
+        vue:'./vue/vue',
         jq: './jq/jquery-3.3.1.min',
-        img: 'jd_imgs'
+        img: 'jd_imgs',
+        index:'overwrite_index'
     },
 
 
@@ -14,5 +16,6 @@ require.config({
     }
 });
 // 引入
-require(["jq",'img'], function () {
+require(["jq",'vue','index','img'], function () {
+
 });

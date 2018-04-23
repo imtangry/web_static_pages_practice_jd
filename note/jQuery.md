@@ -20,7 +20,7 @@ $("button").bind("click",function(){
 show(),hide();toggle();
 fadeIn(),fadeOut(),fadeToggle();
 slideDown(),slideUp(),slideToggle();
-animate({prop:'val'},time)
+animate({prop:'val'},time);
 ###**jq其他**：
 $("ul").append("<li>hello</li>"),选中元素内部插入指定内容;
 appendTo,相当于颠倒顺序,$("b").appendTo("div"),将b添加到div的内部;

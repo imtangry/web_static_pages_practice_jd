@@ -32,7 +32,6 @@ var kitty = new Cat('Kitty');
 var heo = new Cat('Heo');
 console.log(kitty.say());
 console.log(heo.say());
-
 console.log(kitty.say === heo.say);
 
 var a = 2;
@@ -40,18 +39,18 @@ var a = 2;
     // 如果a是参数传入，我们可以把它当做是局部变量
     a = 3;
 })();
+
 let bbb;
-console.log(a)
+console.log(a);
 console.log(bbb);
 
-
-bn = "12"
+bn = "12";
 cn = bn - 0;
 console.log(typeof(cn));
 // 原型链上加的方法，才会是===的？？？
 
 for(var i=0;i<35;i++){
-    console.log("{data_id: "+i+", city: \"\"},")
+    console.log("{data_id: "+i+", city: \"\"},");
 }
 
 console.log(parseInt('f*uk',16));
