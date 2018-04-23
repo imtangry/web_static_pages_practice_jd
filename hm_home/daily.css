@@ -163,10 +163,10 @@ span {
     margin: 0 auto;
     font-size: 52px;
     line-height: 75px;
-    box-shadow: -1px 0 2px rgb(000, 000, 000, 0.2),
-     0 0 0 rgb(000, 000, 000, 0.2),
-      1px 0 2px rgb(000, 000, 000, 0.2), 
-    0 2px 4px rgb(000, 000, 000, 0.2);
+    box-shadow: -1px 0 2px rgba(000, 000, 000, 0.2),
+     0 0 0 rgba(000, 000, 000, 0.2),
+      1px 0 2px rgba(000, 000, 000, 0.2),
+    0 2px 4px rgba(000, 000, 000, 0.2);
     margin-bottom: 4px;
 }
 .more_info{

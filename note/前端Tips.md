@@ -48,6 +48,8 @@ Dom Tree的每个节点都有reflow方法，一个节点的reflow可能触发其
 1.content-box：默认值，border和padding不计算到width。
 2.padding-box：padding算入width。
 3.border-box：border和padding都会算入width。
+4.另外标准模式下，背景其实是包括边框的，可以使用background-clip来设置。
+5.同理background-origin也可以设置背景图片的位置。
 
 ####取消冒泡：
 event.cancleBubble=true;这种相当于全局取消事件冒泡。
