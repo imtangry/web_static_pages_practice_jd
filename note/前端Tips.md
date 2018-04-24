@@ -79,3 +79,55 @@ window.onload=function(){...}和$(document).ready(function(){...})
       1px 0 2px rgb(000, 000, 000, 0.2), 
       0 2px 4px rgb(000, 000, 000, 0.2);
 ```
+####JS性能的优化：
+1.避免全局查找，全局查找需要设计作用域链上的查找。
+2.避免使用with一句，with会创建自己的作用域，会增加执行代码的作用域链的长度，with语句中的代码的执行时间肯定会比外面的代码的执行时间长。
+```javascript
+function test(){
+  with(document.body){
+  alert(tagName);
+  innerHtml="Hello";
+  }
+}
+function test(){
+  var body=document.body;
+  alert(body.tagName);
+  body.innerHtml="Hello";
+  }
+}
+```
+3.几个算法复杂度的例子：
+O(1):var value=10;arr[1];
+O(log n):二分查找，总的执行时间和值得数量有关，但并不一定要获得的每个值。
+O(n):遍历一个数组中的元素。
+O(n^2):每个值至少需要获取n次，例如插入排序。
+思路：可以将多次使用的一个复杂度高点的变量设为局部变量。
+4.优化循环：
+减值迭代：
+优化循环体：
+简化终止条件：因为每次循环都会计算终止条件，然后和他比较。
+使用后测试循环（do-while）：
+```javascript
+
+```
+5.展开循环：循环次数不多可以展开，减少了终止条件的判断。
+思路：Duff装置，将所有循环按每八个一起执行。
+```javascript
+var iterations = Math.floor(values.length/8);
+var leftover = values.length&8;//处理多余的几个元素
+var i=0;
+/*用来处理多出来的几个元素*/
+if(leftover>0){
+  do{
+  process(values[i++]);
+  }while(--leftover>0);
+}
+/*余下数量为8的倍数，不用担心下标越界*/
+do{
+  process(values[i++]);
+  //...以下省略其余7个循环体
+}while(--iterations>0);
+```
+6.避免双重解释:Function(),eval();
+7.原生方法快点，switch语句快点，位运算符快点，var语句可以合并，迭代可以`arr[i++]`，只用一条语句创建数组或对象。
+
